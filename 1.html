@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS задачи</title>
+</head>
+
+<body>
+    <h1>Проверка задач</h1>
+    <div id="output"></div>
+
+    <script>
+        // Функция для вывода на страницу
+        function print(msg) {
+            document.getElementById("output").innerHTML += msg + "<br>";
+        }
+
+        // 1. if..else для числа
+        let num = Number(prompt("Введите число:"));
+        if (num > 0) {
+            print(1);
+        } else if (num < 0) {
+            print(-1);
+        } else {
+            print(0);
+        }
+
+        // 2. Двузначные числа до 40 с шагом 2
+        print("Двузначные числа до 40 с шагом 2:");
+        for (let i = 10; i < 40; i += 2) {
+            print(i);
+        }
+
+        // 3. Таблица умножения числа
+        let n = Number(prompt("Введите число для таблицы умножения:"));
+        print("Таблица умножения для " + n + ":");
+        for (let i = 1; i <= 10; i++) {
+            print(`${n} * ${i} = ${n * i}`);
+        }
+
+        // 4. Сумма чисел от 1 до 14
+        let sum1 = 0;
+        for (let i = 1; i <= 14; i++) {
+            sum1 += i;
+        }
+        print("Сумма от 1 до 14 = " + sum1);
+
+        // 5. Сумма чётных чисел от 1 до 40
+        let sumEven = 0;
+        for (let i = 2; i <= 40; i += 2) {
+            sumEven += i;
+        }
+        print("Сумма чётных от 1 до 40 = " + sumEven);
+
+        // 6. Сумма нечётных чисел от 1 до 40 (while)
+        let sumOdd = 0;
+        let j = 1;
+        while (j <= 40) {
+            if (j % 2 !== 0) {
+                sumOdd += j;
+            }
+            j++;
+        }
+        print("Сумма нечётных от 1 до 40 = " + sumOdd);
+
+        // 7. Произведение чисел, кратных 6, от 1 до 60
+        let product = 1;
+        for (let i = 1; i <= 60; i++) {
+            if (i % 6 === 0) {
+                product *= i;
+            }
+        }
+        print("Произведение чисел, кратных 6 от 1 до 60 = " + product);
+    </script>
+</body>
+
+</html>
